@@ -18,7 +18,6 @@ from pyvirtualdisplay import Display
 
 # Required Function For Working With Jenkins Virtual Machine
 
-
 workbook = xlrd.open_workbook(workbookNameData)
 worksheet = workbook.sheet_by_index(0)
 url = worksheet.cell(1, 0).value

@@ -55,9 +55,6 @@ class Verify_Links(unittest.TestCase):
             #print item
             try:
                 r = requests.head(item)
-                # if item == 'https://drivetexas.org/':
-                #     print item
-                #     print r.status_code
                 if r.status_code != 200 and r.status_code != 301 and r.status_code != 302:
                     print item
                     counter =+1

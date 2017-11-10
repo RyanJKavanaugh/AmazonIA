@@ -7,7 +7,7 @@ from IAAssertUserLogin import Verify_Login
 from IAAssertCreateAndDeleteRoute import Verify_Login_And_Saving_Routes
 from IAAssertFDandTextSizes import Verify_Future_Dates_And_Text_Sizes
 from IAAssertMapLayers import Verify_Map_Layers
-from IAAssertMenuOptions import Verify_LA_Menu_Options
+from IAAssertMenuOptions import Verify_Menu_Options
 import xlrd
 import sys
 from IAVariables import workbookNameData
@@ -39,11 +39,11 @@ map_layers = unittest.TestLoader().loadTestsFromTestCase(Verify_Map_Layers)
 create_and_delete_route = unittest.TestLoader().loadTestsFromTestCase(Verify_Login_And_Saving_Routes)
 
 #   7
-menu_options = unittest.TestLoader().loadTestsFromTestCase(Verify_LA_Menu_Options)
+menu_options = unittest.TestLoader().loadTestsFromTestCase(Verify_Menu_Options)
 
 
 # create a test suite combining search_text and home_page_test
-test_suite = unittest.TestSuite([legend, header_links, user_login, create_and_delete_route, menu_options])
+test_suite = unittest.TestSuite([legend, header_links, future_dates_and_text_sizes, map_layers, user_login, create_and_delete_route, menu_options])
 
 if Jenkins == True:
     # run the suite

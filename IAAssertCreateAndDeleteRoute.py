@@ -106,7 +106,6 @@ class Verify_Login_And_Saving_Routes(unittest.TestCase):
                 alert = driver.switch_to.alert.accept()
             except:
                 break
-
         try:
             driver.find_element_by_xpath('//*[@title="Customize and control Your 511"]').is_displayed()
             assert False
