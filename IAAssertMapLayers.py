@@ -66,8 +66,6 @@ class Verify_Map_Layers(unittest.TestCase):
         dropDownMenuWait = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'layers-menu-dropdown-button')))
         driver.find_element_by_id('layers-menu-dropdown-button').click()
 
-        print itemText[12]
-
         itemWait = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, '//*[@id="layerSelector"]/ul/li[1]/a/span/img[1]')))
         # 1. First Item Verification
         assert Verify_Layer_Drop_Down_Item(driver, itemXpath[0], itemText[0]), (itemText[0] + " Is Faulty")
